@@ -1,0 +1,18 @@
+<h2>Tareas</h2>
+
+<form (ngSubmit)="createTask()">
+  <input [(ngModel)]="newTaskTitle" name="title" placeholder="Título" required />
+  <input [(ngModel)]="newTaskDescription" name="description" placeholder="Descripción" />
+  <button type="submit">Crear tarea</button>
+</form>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    <a [routerLink]="['/tasks', task.id]">{{ task.title }}</a>
+    <button (click)="deleteTask(task.id)">Eliminar</button>
+    <label>
+      <input type="checkbox" [(ngModel)]="task.isCompleted" (change)="toggleCompleted(task)" />
+      Completada
+    </label>
+  </li>
+</ul>

@@ -1,0 +1,16 @@
+<h2>{{ task?.title }}</h2>
+<p>{{ task?.description }}</p>
+
+<h3>Comentarios</h3>
+<ul>
+  <li *ngFor="let comment of comments">
+    {{ comment.content }}
+  </li>
+</ul>
+
+<!-- Textarea para nuevo comentario -->
+<div>
+  <textarea [(ngModel)]="newComment" placeholder="Nuevo comentario..."></textarea>
+  <br />
+  <button (click)="addComment()">Agregar</button>
+</div>
