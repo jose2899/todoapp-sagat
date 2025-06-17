@@ -16,7 +16,7 @@ Cuenta login
 
 
 ### Backend
-
+/ToDoApi ---> esta carpeta es el back
 ```bash
 port:
 https://localhost:7037/swagger/index.html
@@ -24,7 +24,7 @@ https://localhost:7037/swagger/index.html
 dotnet run
 
 ### Frontend
-
+/todoApp ----> esta carpeta es el Front
 npm install
 ng serve
 http://localhost:4200/login
